@@ -1,0 +1,12 @@
+ppm<-c(0.066,0.088,0.12,0.050,0.162,0.186,0.057,0.1)
+ugm<-c(4.6,11.6,9.5,6.3,13.8,15.4,2.5,11.8)
+par(mfrow=c(1,2))
+plot(ppm,ugm,pch=16,col="red", main = "산점도에 회귀직선 추가")
+abline(h=8,col="red")
+abline(v=0.12,col="red")
+lm.line<-lm(ugm~ppm)
+abline(lm.line)
+
+plot(ppm,ugm,type="s",bty="n",main="cosine graph",sub = "type=s")
+abline(h=8,col="red")
+abline(v=0.12,col="red")
